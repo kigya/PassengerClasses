@@ -4,10 +4,10 @@
 //
 
 #include <iostream>
-#include "TimeHandlerOutput.h"
+#include "TimeHandlerInput.h"
 #include "../validator/TimeValidator.h"
 
-Time TimeHandlerOutput::iConsoleTime() {
+Time TimeHandlerInput::iConsoleTime() {
 	Time time;
 	int hours = 0;
     int minutes = 0;
