@@ -11,6 +11,8 @@
     array.push_back(item);
 }
 
+AeroflotTerminal::AeroflotTerminal(const vector<Aeroflot> &array) : array(array) {}
+
 const vector<Aeroflot> &AeroflotTerminal::getArray() const {
     return array;
 }

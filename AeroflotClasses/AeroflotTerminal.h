@@ -17,6 +17,8 @@ public:
 
     AeroflotTerminal() = default;
 
+    AeroflotTerminal(const vector<Aeroflot> &array);
+
     [[nodiscard]] const vector<Aeroflot> &getArray() const;
 
     void addDepartureToArray(const Aeroflot &item);
