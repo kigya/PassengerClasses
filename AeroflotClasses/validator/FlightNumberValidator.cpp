@@ -1,5 +1,6 @@
 //
-// Created by Lenovo on 21.09.2021.
+// Created by Borichevskiy Kirill
+// Belarusian State University 2021
 //
 
 #include "FlightNumberValidator.h"
