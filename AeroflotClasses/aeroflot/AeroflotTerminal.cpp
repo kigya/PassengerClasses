@@ -17,7 +17,6 @@ const vector<Aeroflot> &AeroflotTerminal::getArray() const {
     return array;
 }
 
-
 void AeroflotTerminal::printDepartureListByCertainDestination(const string &dest) {
     for (auto &i: array) {
         if (i.getDestination() == dest) {
