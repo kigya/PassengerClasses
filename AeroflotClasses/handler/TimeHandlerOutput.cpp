@@ -6,7 +6,6 @@
 
 #include <iostream>
 #include "TimeHandlerOutput.h"
-#include "../time/Time.h"
 #include "../validator/TimeValidator.h"
 
 Time TimeHandlerOutput::iConsoleTime() {
