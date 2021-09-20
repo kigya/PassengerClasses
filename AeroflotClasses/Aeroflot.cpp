@@ -10,6 +10,28 @@
 
 Aeroflot::Aeroflot() = default;
 
+Aeroflot::~Aeroflot() = default;
+
+Aeroflot::Aeroflot(string destination, int flightNumber, string planeType, const Time &departureTime,
+                   const string &weekday) : destination(std::move(destination)),
+                                            planeType(std::move(planeType)),
+                                            departureTime(departureTime) {
+    flightNumber > 0 ? this->flightNumber = flightNumber : this->flightNumber = 0;
+    if (weekday == "Monday" || weekday == "Tuesday" || weekday == "Wednesday" || weekday == "Thursday" ||
+        weekday == "Friday" || weekday == "Saturday" || weekday == "Sunday") {
+        this->weekday = weekday;
+    } else {
+        this->weekday = "NaN";
+    }
+}
+
+Aeroflot::Aeroflot(string destination, int flightNumber, string planeType, const Time &departureTime) :
+        destination(std::move(destination)),
+        planeType(std::move(planeType)),
+        departureTime(departureTime) {
+    flightNumber > 0 ? this->flightNumber = flightNumber : this->flightNumber = 0;
+}
+
 const string &Aeroflot::getDestination() const {
     return destination;
 }
@@ -46,9 +68,6 @@ void Aeroflot::setDepartureTime(const Time &departureTime) {
     Aeroflot::departureTime = departureTime;
 }
 
-
-Aeroflot::~Aeroflot() = default;
-
 string Aeroflot::toString() const {
     if (weekday.empty()) {
         try {
@@ -66,24 +85,3 @@ string Aeroflot::toString() const {
         return str;
     }
 }
-
-Aeroflot::Aeroflot(string destination, int flightNumber, string planeType, const Time &departureTime,
-                   const string &weekday) : destination(std::move(destination)),
-                                            planeType(std::move(planeType)),
-                                            departureTime(departureTime) {
-    flightNumber > 0 ? this->flightNumber = flightNumber : this->flightNumber = 0;
-    if (weekday == "Monday" || weekday == "Tuesday" || weekday == "Wednesday" || weekday == "Thursday" ||
-        weekday == "Friday" || weekday == "Saturday" || weekday == "Sunday") {
-        this->weekday = weekday;
-    } else {
-        this->weekday = "NaN";
-    }
-}
-
-Aeroflot::Aeroflot(string destination, int flightNumber, string planeType, const Time &departureTime) :
-        destination(std::move(destination)),
-        planeType(std::move(planeType)),
-        departureTime(departureTime) {
-    flightNumber > 0 ? this->flightNumber = flightNumber : this->flightNumber = 0;
-}
-
