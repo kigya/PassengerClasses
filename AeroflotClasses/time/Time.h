@@ -24,6 +24,7 @@ public:
 
     void setMinutes(int minutes);
 
+    void setTime(int hours, int minutes);
 };
 
 #endif // TIME_H

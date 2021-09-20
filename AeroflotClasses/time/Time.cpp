@@ -60,3 +60,8 @@ void Time::setHours(int hours) {
 void Time::setMinutes(int minutes) {
     Time::minutes = minutes;
 }
+
+void Time::setTime(int hours, int minutes) {
+    Time::hours = hours;
+    Time::minutes = minutes;
+}
