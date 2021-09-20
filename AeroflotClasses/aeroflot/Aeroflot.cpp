@@ -7,6 +7,7 @@
 #include "../exception/ExceptionWeekday.h"
 #include <utility>
 #include <iostream>
+#include "../validator/FlightNumberValidator.h"
 
 Aeroflot::Aeroflot() = default;
 
@@ -29,7 +30,7 @@ Aeroflot::Aeroflot(string destination, int flightNumber, string planeType, const
         destination(std::move(destination)),
         planeType(std::move(planeType)),
         departureTime(departureTime) {
-    flightNumber > 0 ? this->flightNumber = flightNumber : this->flightNumber = 0;
+    FlightNumberValidator::isPositive(flightNumber) ? this->flightNumber = flightNumber : this->flightNumber = 0;
 }
 
 const string &Aeroflot::getDestination() const {
