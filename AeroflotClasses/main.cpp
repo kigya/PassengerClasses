@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Time.h"
-#include "Aeroflot.h"
-#include "AeroflotTerminal.h"
-#include "AeroflotHandlerOutput.h"
+#include "time/Time.h"
+#include "aeroflot/Aeroflot.h"
+#include "aeroflot/AeroflotTerminal.h"
+#include "handler/AeroflotHandlerOutput.h"
 
 int main() {
     AeroflotTerminal terminal(AeroflotHandlerOutput::initializeDepartures());

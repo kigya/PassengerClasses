@@ -7,7 +7,7 @@
 #define AEROFLOTCLASSES_AEROFLOTHANDLEROUTPUT_H
 
 
-#include "AeroflotTerminal.h"
+#include "../aeroflot/AeroflotTerminal.h"
 
 class AeroflotHandlerOutput {
 public:

@@ -4,7 +4,7 @@
 //
 
 #include "Aeroflot.h"
-#include "ExceptionWeekday.h"
+#include "../exception/ExceptionWeekday.h"
 #include <utility>
 #include <iostream>
 
