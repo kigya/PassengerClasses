@@ -17,7 +17,8 @@ public:
 
     AeroflotTerminal() = default;
 
-    AeroflotTerminal(const vector<Aeroflot> &array);
+    // avoid unintentional implicit conversion with explicit
+    explicit AeroflotTerminal(const vector<Aeroflot> &array);
 
     [[nodiscard]] const vector<Aeroflot> &getArray() const;
 
