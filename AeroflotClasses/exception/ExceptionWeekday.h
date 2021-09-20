@@ -14,8 +14,8 @@ class ExceptionWeekday {
 private:
     std::string str;
 public:
-    explicit ExceptionWeekday(const std::string str);
-	std::string what() const;
+    explicit ExceptionWeekday(const std::string& str);
+	[[nodiscard]] std::string what() const;
 };
 
 #endif //AEROFLOTCLASSES_EXCEPTIONWEEKDAY_H
