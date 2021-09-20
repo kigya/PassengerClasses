@@ -8,6 +8,7 @@
 #include <utility>
 #include <iostream>
 #include "../validator/FlightNumberValidator.h"
+#include "../validator/WeekdayValidator.h"
 
 Aeroflot::Aeroflot() = default;
 
@@ -17,9 +18,8 @@ Aeroflot::Aeroflot(string destination, int flightNumber, string planeType, const
                    const string &weekday) : destination(std::move(destination)),
                                             planeType(std::move(planeType)),
                                             departureTime(departureTime) {
-    flightNumber > 0 ? this->flightNumber = flightNumber : this->flightNumber = 0;
-    if (weekday == "Monday" || weekday == "Tuesday" || weekday == "Wednesday" || weekday == "Thursday" ||
-        weekday == "Friday" || weekday == "Saturday" || weekday == "Sunday") {
+    FlightNumberValidator::isPositive(flightNumber) ? this->flightNumber = flightNumber : this->flightNumber = 0;
+    if (WeekdayValidator::isCorrectWeekday(weekday)) {
         this->weekday = weekday;
     } else {
         this->weekday = "NaN";
