@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 project(AeroflotClasses)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 
-add_executable(AeroflotClasses AeroflotClasses/main.cpp AeroflotClasses/time/Time.cpp AeroflotClasses/time/Time.h AeroflotClasses/aeroflot/Aeroflot.cpp AeroflotClasses/aeroflot/Aeroflot.h AeroflotClasses/aeroflot/AeroflotTerminal.cpp AeroflotClasses/aeroflot/AeroflotTerminal.h AeroflotClasses/exception/ExceptionWeekday.cpp AeroflotClasses/exception/ExceptionWeekday.h AeroflotClasses/handler/AeroflotHandlerOutput.cpp AeroflotClasses/handler/AeroflotHandlerOutput.h)
+add_executable(AeroflotClasses AeroflotClasses/main.cpp AeroflotClasses/time/Time.cpp AeroflotClasses/time/Time.h AeroflotClasses/aeroflot/Aeroflot.cpp AeroflotClasses/aeroflot/Aeroflot.h AeroflotClasses/aeroflot/AeroflotTerminal.cpp AeroflotClasses/aeroflot/AeroflotTerminal.h AeroflotClasses/exception/ExceptionWeekday.cpp AeroflotClasses/exception/ExceptionWeekday.h AeroflotClasses/handler/AeroflotHandlerOutput.cpp AeroflotClasses/handler/AeroflotHandlerOutput.h AeroflotClasses/validator/FlightNumberValidator.cpp AeroflotClasses/validator/FlightNumberValidator.h AeroflotClasses/validator/WeekdayValidator.cpp AeroflotClasses/validator/WeekdayValidator.h)
