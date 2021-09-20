@@ -5,7 +5,7 @@
 
 #include "ExceptionWeekday.h"
 
-ExceptionWeekday::ExceptionWeekday(const std::string str) {
+ExceptionWeekday::ExceptionWeekday(const std::string& str) {
 	this->str = str;
 }
 
