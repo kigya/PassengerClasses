@@ -10,7 +10,7 @@ Time::Time(int hours, int minutes) : hours(hours), minutes(minutes) {
     if (TimeValidator::isValidHours(hours)) {
         this->hours = 23;
     }
-    if (minutes > 59 || minutes < 0) {
+    if (TimeValidator::isValidMinutes(minutes)) {
         this->minutes = 59;
     }
 }
