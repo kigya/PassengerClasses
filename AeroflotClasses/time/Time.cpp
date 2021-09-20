@@ -1,13 +1,13 @@
 #include <iostream>
 #include "Time.h"
+#include "../validator/TimeValidator.h"
 #include <string>
-
 using namespace std;
 
 Time::Time() = default;
 
 Time::Time(int hours, int minutes) : hours(hours), minutes(minutes) {
-    if (hours > 23 || hours < 0) {
+    if (TimeValidator::isValidHours(hours)) {
         this->hours = 23;
     }
     if (minutes > 59 || minutes < 0) {
