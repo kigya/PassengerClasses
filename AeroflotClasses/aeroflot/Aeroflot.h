@@ -52,5 +52,4 @@ public:
 
 };
 
-
 #endif //AEROFLOTCLASSES_AEROFLOT_H
