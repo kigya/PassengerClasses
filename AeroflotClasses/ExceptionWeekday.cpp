@@ -5,11 +5,11 @@
 
 #include "ExceptionWeekday.h"
 
-ExceptionWeekday::ExceptionWeekday(const char* str) {
-	strcpy_s(this->str, 200, str);
+ExceptionWeekday::ExceptionWeekday(const std::string str) {
+	this->str = str;
 }
 
-const char * ExceptionWeekday::what() const {
+std::string ExceptionWeekday::what() const {
 	return str;
 }
 

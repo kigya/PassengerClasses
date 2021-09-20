@@ -4,7 +4,6 @@
 #include "AeroflotTerminal.h"
 
 int main() {
-    Time current(0, 60);
     Aeroflot belavia("Riga", 1, "Boeing 737", Time(12, 45), "Tuesday");
     Aeroflot quatarAirways("Riga", 2, "Piper Pacer", Time(15, 30), "Monday");
     Aeroflot emirates("Melbourne", 3, "Piper PA-23", Time(8, 0), "Friday");
@@ -46,7 +45,7 @@ int main() {
     cout << "\n-----Departures on Monday 10:30 and later:-----" << endl;
     terminal.printDepartureListByCertainWeekdayWithTime("Friday", Time(10, 30));
 
-    cout << "\n-----Exception demonstration:-----" << endl;
+    cout << "-----Exception demonstration-----" << endl;
     Aeroflot americanAirlines("Denver", 11, "Avro 500", Time(10, 20));
     cout << americanAirlines.toString();
 
