@@ -12,6 +12,8 @@ class TimeValidator {
 
 public:
     static bool isValidHours(int hours);
+
+    static bool isValidMinutes(int minutes);
 };
 
 
