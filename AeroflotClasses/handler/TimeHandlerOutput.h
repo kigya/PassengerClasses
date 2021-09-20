@@ -2,7 +2,6 @@
 // Created by Borichevskiy Kirill
 // Belarusian State University 2021
 //
-//
 
 #ifndef AEROFLOTCLASSES_TIMEHANDLEROUTPUT_H
 #define AEROFLOTCLASSES_TIMEHANDLEROUTPUT_H
