@@ -9,6 +9,7 @@ int main() {
     AeroflotHandlerOutput::printTestResults(terminal);
     // AeroflotHandlerOutput::printExceptionDemo();
 
-    AeroflotHandlerOutput::printCustomConsoleAeroflot();
+    // AeroflotHandlerOutput::printCustomConsoleAeroflot();
+
     return 0;
 }

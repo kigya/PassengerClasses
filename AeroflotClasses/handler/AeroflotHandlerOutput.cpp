@@ -9,7 +9,7 @@
 
 AeroflotTerminal AeroflotHandlerOutput::initializeDepartures() {
     AeroflotTerminal terminal{};
-    Aeroflot belavia("Riga", 1, "Boeing 737", Time(12, 45), "Tuesday");
+    Aeroflot belavia("Riga", 1, "Boeing 737", Time(12, 45), "Tuesda");
     Aeroflot quatarAirways("Riga", 2, "Piper Pacer", Time(15, 30), "Monday");
     Aeroflot emirates("Melbourne", 3, "Piper PA-23", Time(8, 0), "Friday");
     Aeroflot hainanAirlines("Doha", 4, "Witchcraft Baron", Time(7, 50), "Friday");

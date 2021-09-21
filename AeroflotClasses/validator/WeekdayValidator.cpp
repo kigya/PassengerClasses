@@ -7,5 +7,10 @@
 #include <string>
 
 bool WeekdayValidator::isCorrectWeekday(const std::string& weekday) {
-    return true;
+    if (weekday == "Monday" || weekday == "Tuesday" || weekday == "Wednesday" || weekday == "Thursday" ||
+    weekday == "Friday" || weekday == "Saturday" || weekday == "Sunday") {
+        return true;
+    } else {
+        return false;
+    }
 }
