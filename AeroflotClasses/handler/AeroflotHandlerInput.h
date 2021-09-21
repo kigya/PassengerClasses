@@ -8,8 +8,11 @@
 #define AEROFLOTCLASSES_AEROFLOTHANDLERINPUT_H
 
 
-class AeroflotHandlerInput {
+#include "../aeroflot/Aeroflot.h"
 
+class AeroflotHandlerInput {
+public:
+    static Aeroflot iConsoleAeroflot();
 };
 
 

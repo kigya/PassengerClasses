@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include "AeroflotHandlerOutput.h"
+#include "AeroflotHandlerInput.h"
 
 AeroflotTerminal AeroflotHandlerOutput::initializeDepartures() {
     AeroflotTerminal terminal{};
@@ -57,4 +58,9 @@ void AeroflotHandlerOutput::printExceptionDemo() {
     cout << "\n-----Exception demonstration-----" << endl;
     Aeroflot americanAirlines("Denver", 11, "Avro 500", Time(10, 20));
     cout << americanAirlines.toString();
+}
+
+void AeroflotHandlerOutput::printCustomConsoleAeroflot() {
+    cout << "\n-----Custom aeroflot:-----" << endl;
+    cout << AeroflotHandlerInput::iConsoleAeroflot().toString();
 }
