@@ -7,7 +7,8 @@
 int main() {
     AeroflotTerminal terminal(AeroflotHandlerOutput::initializeDepartures());
     AeroflotHandlerOutput::printTestResults(terminal);
-    AeroflotHandlerOutput::printExceptionDemo();
+    // AeroflotHandlerOutput::printExceptionDemo();
 
+    AeroflotHandlerOutput::printCustomConsoleAeroflot();
     return 0;
 }
