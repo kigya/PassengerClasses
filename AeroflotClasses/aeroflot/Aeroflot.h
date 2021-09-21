@@ -51,6 +51,8 @@ public:
 
     [[nodiscard]] const string &getWeekday() const;
 
+    void setWeekday(const string &weekday);
+
 };
 
 #endif //AEROFLOTCLASSES_AEROFLOT_H

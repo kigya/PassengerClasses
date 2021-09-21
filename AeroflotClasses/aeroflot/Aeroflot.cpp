@@ -69,6 +69,10 @@ void Aeroflot::setDepartureTime(const Time &departureTime) {
     Aeroflot::departureTime = departureTime;
 }
 
+void Aeroflot::setWeekday(const string &weekday) {
+    Aeroflot::weekday = weekday;
+}
+
 string Aeroflot::toString() const {
     if (weekday.empty()) {
         try {
