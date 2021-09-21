@@ -31,6 +31,7 @@ public:
 
     virtual ~Aeroflot();
 
+    //specifies that the value returned by the function cannot be ignored and must be stored in some variable
     [[nodiscard]] const string &getDestination() const;
 
     [[maybe_unused]] [[nodiscard]] int getFlightNumber() const;

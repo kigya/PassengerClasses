@@ -14,6 +14,7 @@ class ExceptionWeekday {
 private:
     std::string str;
 public:
+    //explicit function specifier controls unwanted implicit type conversions
     explicit ExceptionWeekday(const std::string& str);
 	[[nodiscard]] std::string what() const;
 };

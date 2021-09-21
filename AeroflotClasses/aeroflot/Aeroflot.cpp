@@ -5,7 +5,6 @@
 
 #include "Aeroflot.h"
 #include "../exception/ExceptionWeekday.h"
-#include <utility>
 #include <iostream>
 #include "../validator/FlightNumberValidator.h"
 #include "../validator/WeekdayValidator.h"
@@ -37,6 +36,7 @@ const string &Aeroflot::getDestination() const {
     return destination;
 }
 
+// attribute that suppresses warnings on unused entities.
 [[maybe_unused]] int Aeroflot::getFlightNumber() const {
     return flightNumber;
 }
@@ -91,6 +91,7 @@ string Aeroflot::toString() const {
     }
 }
 
+// c_str() - std::string to const char*
 [[maybe_unused]] char *Aeroflot::toCharArray() const {
      auto *s = new(std::nothrow) char[255];
     if (weekday.empty()) {
