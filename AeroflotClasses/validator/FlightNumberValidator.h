@@ -5,7 +5,6 @@
 
 #ifndef AEROFLOTCLASSES_FLIGHTNUMBERVALIDATOR_H
 #define AEROFLOTCLASSES_FLIGHTNUMBERVALIDATOR_H
-#include <iostream>
 
 
 class FlightNumberValidator {

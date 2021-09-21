@@ -11,9 +11,9 @@
     array.push_back(item);
 }
 
-AeroflotTerminal::AeroflotTerminal(const vector<Aeroflot> &array) : array(array) {}
+[[maybe_unused]] AeroflotTerminal::AeroflotTerminal(const vector<Aeroflot> &array) : array(array) {}
 
-const vector<Aeroflot> &AeroflotTerminal::getArray() const {
+[[maybe_unused]] const vector<Aeroflot> &AeroflotTerminal::getArray() const {
     return array;
 }
 

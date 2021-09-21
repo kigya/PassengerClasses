@@ -15,21 +15,6 @@ Time::Time(int hours, int minutes) : hours(hours), minutes(minutes) {
     }
 }
 
-char *Time::toCharString() const {
-    auto *s = new(std::nothrow) char[10];
-    if ((hours >= 0 && hours <= 9) || (minutes >= 0 && minutes <= 9)) {
-        if (minutes >= 0 && minutes <= 9) {
-            sprintf_s(s, 10, "0%d:0%d", hours, minutes);
-        } else {
-            sprintf_s(s, 10, "0%d:%d", hours, minutes);
-
-        }
-    } else {
-        sprintf_s(s, 10, "%d:%d", hours, minutes);
-    }
-    return s;
-}
-
 string Time::toString() const {
     std::string str;
     if ((hours >= 0 && hours <= 9) || (minutes >= 0 && minutes <= 9)) {
@@ -45,6 +30,21 @@ string Time::toString() const {
     return str;
 }
 
+[[maybe_unused]] char *Time::toCharArray() const {
+    auto *s = new(std::nothrow) char[10];
+    if ((hours >= 0 && hours <= 9) || (minutes >= 0 && minutes <= 9)) {
+        if (minutes >= 0 && minutes <= 9) {
+            sprintf_s(s, 10, "0%d:0%d", hours, minutes);
+        } else {
+            sprintf_s(s, 10, "0%d:%d", hours, minutes);
+
+        }
+    } else {
+        sprintf_s(s, 10, "%d:%d", hours, minutes);
+    }
+    return s;
+}
+
 int Time::getHours() const {
     return hours;
 }
@@ -53,11 +53,11 @@ int Time::getMinutes() const {
     return minutes;
 }
 
-void Time::setHours(int hours) {
+[[maybe_unused]] void Time::setHours(int hours) {
     Time::hours = hours;
 }
 
-void Time::setMinutes(int minutes) {
+[[maybe_unused]] void Time::setMinutes(int minutes) {
     Time::minutes = minutes;
 }
 

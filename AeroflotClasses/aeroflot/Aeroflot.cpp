@@ -37,11 +37,11 @@ const string &Aeroflot::getDestination() const {
     return destination;
 }
 
-int Aeroflot::getFlightNumber() const {
+[[maybe_unused]] int Aeroflot::getFlightNumber() const {
     return flightNumber;
 }
 
-const string &Aeroflot::getPlaneType() const {
+[[maybe_unused]] const string &Aeroflot::getPlaneType() const {
     return planeType;
 }
 
@@ -89,4 +89,19 @@ string Aeroflot::toString() const {
               "\nWeekday: " + weekday + "\n";
         return str;
     }
+}
+
+[[maybe_unused]] char *Aeroflot::toCharArray() const {
+     auto *s = new(std::nothrow) char[255];
+    if (weekday.empty()) {
+        try {
+            throw ExceptionWeekday("Weekday is not specified!");
+        } catch (const ExceptionWeekday &error) {
+            std::cerr << error.what() << '\n';
+        }
+    } else {
+        sprintf(s, "\nDestination: %s\nFlight number: %d\nPlane type: %s\nDeparture time: %s\nWeekday: %s",
+                  destination.c_str(), flightNumber, planeType.c_str(), departureTime.toString().c_str(), weekday.c_str());
+    }
+    return s;
 }

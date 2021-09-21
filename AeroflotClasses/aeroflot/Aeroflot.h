@@ -33,9 +33,9 @@ public:
 
     [[nodiscard]] const string &getDestination() const;
 
-    [[nodiscard]] int getFlightNumber() const;
+    [[maybe_unused]] [[nodiscard]] int getFlightNumber() const;
 
-    [[nodiscard]] const string &getPlaneType() const;
+    [[maybe_unused]] [[nodiscard]] const string &getPlaneType() const;
 
     [[nodiscard]] const Time &getDepartureTime() const;
 
@@ -48,6 +48,8 @@ public:
     void setDepartureTime(const Time &departureTime);
 
     [[nodiscard]] string toString() const;
+
+    [[maybe_unused]] [[nodiscard]] char * toCharArray() const;
 
     [[nodiscard]] const string &getWeekday() const;
 

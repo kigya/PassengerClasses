@@ -15,9 +15,9 @@ public:
 
     static AeroflotTerminal initializeDepartures();
 
-    static void printExceptionDemo();
+    [[maybe_unused]] static void printExceptionDemo();
 
-    static void printCustomConsoleAeroflot();
+    [[maybe_unused]] static void printCustomConsoleAeroflot();
 };
 
 

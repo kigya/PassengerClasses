@@ -12,7 +12,7 @@ public:
 
     Time(int hours, int minutes);
 
-    [[nodiscard]] char *toCharString() const;
+    [[maybe_unused]] [[nodiscard]] char *toCharArray() const;
 
     [[nodiscard]] string toString() const;
 
@@ -20,9 +20,9 @@ public:
 
     [[nodiscard]] int getMinutes() const;
 
-    void setHours(int hours);
+    [[maybe_unused]] void setHours(int hours);
 
-    void setMinutes(int minutes);
+    [[maybe_unused]] void setMinutes(int minutes);
 
     void setTime(int hours, int minutes);
 };

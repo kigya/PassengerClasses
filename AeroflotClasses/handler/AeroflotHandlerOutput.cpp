@@ -9,7 +9,7 @@
 
 AeroflotTerminal AeroflotHandlerOutput::initializeDepartures() {
     AeroflotTerminal terminal{};
-    Aeroflot belavia("Riga", 1, "Boeing 737", Time(12, 45), "Tuesda");
+    Aeroflot belavia("Riga", 1, "Boeing 737", Time(12, 45), "Tuesday");
     Aeroflot quatarAirways("Riga", 2, "Piper Pacer", Time(15, 30), "Monday");
     Aeroflot emirates("Melbourne", 3, "Piper PA-23", Time(8, 0), "Friday");
     Aeroflot hainanAirlines("Doha", 4, "Witchcraft Baron", Time(7, 50), "Friday");
@@ -54,13 +54,13 @@ void AeroflotHandlerOutput::printTestResults(AeroflotTerminal terminal) {
     terminal.printDepartureListByCertainWeekdayWithTime("Friday", Time(10, 30));
 }
 
-void AeroflotHandlerOutput::printExceptionDemo() {
+[[maybe_unused]] void AeroflotHandlerOutput::printExceptionDemo() {
     cout << "\n-----Exception demonstration-----" << endl;
     Aeroflot americanAirlines("Denver", 11, "Avro 500", Time(10, 20));
     cout << americanAirlines.toString();
 }
 
-void AeroflotHandlerOutput::printCustomConsoleAeroflot() {
+[[maybe_unused]] void AeroflotHandlerOutput::printCustomConsoleAeroflot() {
     cout << "\n-----Custom aeroflot:-----" << endl;
     cout << AeroflotHandlerInput::iConsoleAeroflot().toString();
 }
