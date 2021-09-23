@@ -40,13 +40,13 @@ public:
 
     [[nodiscard]] const Time &getDepartureTime() const;
 
-    void setDestination(const string &destination);
+    void setDestination(string destination);
 
     void setFlightNumber(int flightNumber);
 
-    void setPlaneType(const string &planeType);
+    void setPlaneType(string planeType);
 
-    void setDepartureTime(const Time &departureTime);
+    void setDepartureTime(Time departureTime);
 
     [[nodiscard]] string toString() const;
 
@@ -54,7 +54,7 @@ public:
 
     [[nodiscard]] const string &getWeekday() const;
 
-    void setWeekday(const string &weekday);
+    void setWeekday(string weekday);
 
 };
 

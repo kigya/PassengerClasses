@@ -6,10 +6,15 @@
 #include "Aeroflot.h"
 #include "../exception/ExceptionWeekday.h"
 #include <iostream>
+#include <utility>
 #include "../validator/FlightNumberValidator.h"
 #include "../validator/WeekdayValidator.h"
 
-Aeroflot::Aeroflot() = default;
+Aeroflot::Aeroflot(): flightNumber(0), departureTime(Time(0, 0)) {
+    this->destination = "not determined";
+    this->planeType = "not determined";
+    this->weekday = "not determined";
+}
 
 Aeroflot::~Aeroflot() = default;
 
@@ -53,24 +58,28 @@ const string &Aeroflot::getWeekday() const {
     return weekday;
 }
 
-void Aeroflot::setDestination(const string &destination) {
-    Aeroflot::destination = destination;
+void Aeroflot::setDestination(string destination) {
+    Aeroflot::destination = std::move(destination);
 }
 
 void Aeroflot::setFlightNumber(int flightNumber) {
-    Aeroflot::flightNumber = flightNumber;
+    FlightNumberValidator::isPositive(flightNumber) ? this->flightNumber = flightNumber : this->flightNumber = 0;
 }
 
-void Aeroflot::setPlaneType(const string &planeType) {
-    Aeroflot::planeType = planeType;
+void Aeroflot::setPlaneType(string planeType) {
+    Aeroflot::planeType = std::move(planeType);
 }
 
-void Aeroflot::setDepartureTime(const Time &departureTime) {
+void Aeroflot::setDepartureTime(Time departureTime) {
     Aeroflot::departureTime = departureTime;
 }
 
-void Aeroflot::setWeekday(const string &weekday) {
-    Aeroflot::weekday = weekday;
+void Aeroflot::setWeekday(string weekday) {
+    if (WeekdayValidator::isCorrectWeekday(weekday)) {
+        this->weekday = weekday;
+    } else {
+        this->weekday = "NaN";
+    }
 }
 
 string Aeroflot::toString() const {

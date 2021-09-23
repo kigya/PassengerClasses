@@ -2,16 +2,18 @@
 #include "Time.h"
 #include "../validator/TimeValidator.h"
 #include <string>
+const int HOURS_MAX = 23;
+const int MINUTES_MAX = 59;
 using namespace std;
 
 Time::Time() = default;
 
 Time::Time(int hours, int minutes) : hours(hours), minutes(minutes) {
-    if (TimeValidator::isValidHours(hours)) {
-        this->hours = 23;
+    if (!TimeValidator::isValidHours(hours)) {
+        this->hours = HOURS_MAX;
     }
-    if (TimeValidator::isValidMinutes(minutes)) {
-        this->minutes = 59;
+    if (!TimeValidator::isValidMinutes(minutes)) {
+        this->minutes = MINUTES_MAX;
     }
 }
 
@@ -62,6 +64,14 @@ int Time::getMinutes() const {
 }
 
 void Time::setTime(int hours, int minutes) {
-    Time::hours = hours;
-    Time::minutes = minutes;
+    if (!TimeValidator::isValidHours(hours)) {
+        this->hours = HOURS_MAX;
+    } else {
+        Time::hours = hours;
+    }
+    if (!TimeValidator::isValidMinutes(minutes)) {
+        this->minutes = MINUTES_MAX;
+    } else {
+        Time::minutes = minutes;
+    }
 }

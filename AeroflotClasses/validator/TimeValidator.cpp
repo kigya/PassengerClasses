@@ -7,9 +7,9 @@
 #include "TimeValidator.h"
 
 bool TimeValidator::isValidHours(int hours) {
-    return (hours > 23 || hours < 0);
+    return !(hours > 23 || hours < 0);
 }
 
 bool TimeValidator::isValidMinutes(int minutes) {
-    return (minutes > 59 || minutes < 0);
+    return !(minutes > 59 || minutes < 0);
 }
