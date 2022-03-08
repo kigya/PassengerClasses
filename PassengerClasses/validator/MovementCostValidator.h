@@ -7,9 +7,9 @@
 #define AEROFLOTCLASSES_FLIGHTNUMBERVALIDATOR_H
 
 
-class FlightNumberValidator {
+class MovementCostValidator {
 public:
-    static bool isPositive(int number);
+    static bool isPositive(double number);
 };
 
 

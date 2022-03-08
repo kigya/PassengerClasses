@@ -20,11 +20,11 @@ public:
 
     [[nodiscard]] int getMinutes() const;
 
-    [[maybe_unused]] void setHours(int hours);
+    [[maybe_unused]] void setHours(int h);
 
-    [[maybe_unused]] void setMinutes(int minutes);
+    [[maybe_unused]] void setMinutes(int m);
 
-    void setTime(int hours, int minutes);
+    void setTime(int h, int m);
 };
 
 #endif // TIME_H

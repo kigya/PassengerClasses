@@ -3,8 +3,8 @@
 // Belarusian State University 2021
 //
 
-#include "FlightNumberValidator.h"
+#include "MovementCostValidator.h"
 
-bool FlightNumberValidator::isPositive(int number) {
+bool MovementCostValidator::isPositive(double number) {
     return number > 0;
 }

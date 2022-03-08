@@ -55,23 +55,23 @@ int Time::getMinutes() const {
     return minutes;
 }
 
-[[maybe_unused]] void Time::setHours(int hours) {
-    Time::hours = hours;
+[[maybe_unused]] void Time::setHours(int h) {
+    Time::hours = h;
 }
 
-[[maybe_unused]] void Time::setMinutes(int minutes) {
-    Time::minutes = minutes;
+[[maybe_unused]] void Time::setMinutes(int m) {
+    Time::minutes = m;
 }
 
-void Time::setTime(int hours, int minutes) {
-    if (!TimeValidator::isValidHours(hours)) {
+void Time::setTime(int h, int m) {
+    if (!TimeValidator::isValidHours(h)) {
         this->hours = HOURS_MAX;
     } else {
-        Time::hours = hours;
+        Time::hours = h;
     }
-    if (!TimeValidator::isValidMinutes(minutes)) {
+    if (!TimeValidator::isValidMinutes(m)) {
         this->minutes = MINUTES_MAX;
     } else {
-        Time::minutes = minutes;
+        Time::minutes = m;
     }
 }
